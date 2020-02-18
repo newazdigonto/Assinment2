@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+</head>
+<body>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            background-color: rgb(157, 172, 172);
+        }
+
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: rgb(3, 138, 55);
+    
+        }
+    </style>
+
+    <div class="footer">
+
+        <h1>CONVERTER</h1>
+
+
+    <label for="">BDT &nbsp &nbsp</label>
+    
+    <input type="text" id="taka"><br><br><br><p>Equals</p>
+    <label for="">USD &nbsp &nbsp</label>
+    <input type="text" id="dollar"><br><br><br><p>Equals</p>
+    <label for="">EURO &nbsp</label>
+    <input type="text" id="euro"><br><br><br><p>Equals</p>
+    <label for="">CAD &nbsp &nbsp</label>
+    <input type="text" id="cad"><br><br><br><p>Equals</p>
+    <label for="">INR &nbsp &nbsp &nbsp</label>
+    <input type="text" id="inr"><br><p>This is the LAst (-_-)</p>
+
+
+    <script>
+      let taka= document.querySelector('#taka')
+      let dollar= document.querySelector('#dollar')
+      let euro= document.querySelector('#euro')
+       taka.addEventListener('change',(e)=>{
+           e.preventDefault()
+            dollar.value = taka.value*84.86
+            euro.value = taka.value*91.91
+            cad.value = taka.value*64.05
+            inr.value = taka.value*1.12
+         
+       })
+       dollar.addEventListener('change',(e)=>{
+           e.preventDefault()
+            taka.value = dollar.value/84.86
+            euro.value = dollar.value*0.96
+            cad.value = dollar.value*1.33
+            inr.value = dollar.value/71.73
+       })
+       euro.addEventListener('change',(e)=>{
+           e.preventDefault()
+            taka.value = euro.value/91.95
+            dollar.value = euro.value*1.18
+            cad.value = euro.value*1.44
+            inr.value = euro.value/77.47
+       })
+       cad.addEventListener('change',(e)=>{
+           e.preventDefault()
+            taka.value = cad.value/64.74
+            dollar.value = cad.value*0.75
+            euro.value = cad.value*0.7
+            inr.value = cad.value/53.98
+       })
+       inr.addEventListener('change',(e)=>{
+           e.preventDefault()
+            taka.value = inr.value*1.18
+            dollar.value = inr.value*0.014
+            euro.value = inr.value*0.013
+            cad.value = inr.value*0.019
+       })
+       
+    </script>
+
+    </div>
+</body>
+</html>

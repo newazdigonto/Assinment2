@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Generator</title>
+</head>
+
+<body onload="myFunction()">
+
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            background-color: rgb(157, 172, 172);
+        }
+
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: rgb(105, 164, 172);
+    
+        }
+    </style>
+
+    <div class="footer">
+
+        <h1>FOOTER</h1>
+
+        <table style="width:700px;height:100px;margin-left:300px;">
+            <tr>
+                <th>
+                    <h2>
+                        <p id="text"></p>
+                        <script>
+
+                            let showQuotes = document.querySelector('#text')
+                            let quotes = ['In order to have great friends, you must first learn to be a great friend.',
+                                'Being happy is not always being perfect.',
+                                'An idea is not responsible for the people who believe in it.',
+                                'Romance is likely; strike up a conversation.',
+                                'Romance comes into your life this year in a very unusual sort of way.',
+                                'Your good nature will bring you unbounded happiness.',
+                                '“The greatest happiness of life is the conviction that we are loved; loved for ourselves, or rather, loved in spite of ourselves"---Victor Hugo',
+                                'I believe in the compelling power of love. I do not understand it. I believe it to be the most fragrant blossom of all this thorny existence.--Theodore Dreiser',
+                                'How absurd and delicious it is to be in love with somebody younger than yourself. Everybody should try it.---Barbara Pym',
+                                'The way to love anything is to realize that it may be lost.--G. K. Chesterton',
+                                'To say ‘I love you’ one must first be able to say the ‘I’.---Ayn Rand',
+                                'Blessed is the influence of one true, loving human soul on another.---George Eliot',
+                                'To love another person is to see the face of God.---Lawrence Durrell',
+                                'The richest love is that which submits to the arbitration of time.---Stendhal',
+                                'A very small degree of hope is sufficient to cause the birth of love.---Henry David Thoreau',
+                                'The supreme happiness in life is the conviction that we are loved.---Leo Tolstoy',
+                                'We are not the same persons this year as last; nor are those we love. It is a happy chance if we, changing, continue to love a changed person.---W. Somerset Maugham',
+                                'Love: the irresistible desire to be irresistibly desired.---Mark Twain',
+                                'To love someone is to see a miracle invisible to others.---Francois Mauriac',
+                                'We don’t see things as they are. We see things as we are.---Anais Nin',
+                                'Love is only a dirty trick played on us to achieve continuation of the species.---W. Somerset Maugham',
+                                'Some of us think holding on makes us strong; but sometimes it is letting go.---Hermann Hesse',
+                                'There is only one happiness in life, to love and be loved.---George Sand',
+                            ]
+                            let random = Math.floor(Math.random() * 23);
+                            function myFunction() {
+                                showQuotes.innerHTML = quotes[random];
+
+                            }
+
+                        </script>
+
+                    </h2>
+                </th>
+            </tr>
+        </table>
+
+
+
+    </div>
+
+</body>
+
+</html>

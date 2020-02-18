@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+
+<body>
+
+    <style>
+        
+
+        p.question {
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            color: #2E2E2E;
+            margin-bottom: 0px;
+        }
+
+        h2.quizHeader {
+            font-family: Arial, sans-serif;
+            font-weight: normal;
+            font-size: 25px;
+            line-height: 27px;
+            margin: 24px 0 12px 0;
+            padding: 0 0 4px 0;
+            border-bottom: 1px solid #0ccfd6;
+        }
+
+        h2.quizScore {
+            font-family: Arial, sans-serif;
+            font-size: 25px;
+        }
+
+        div.quizAnswers {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #424242;
+            padding: 4px 0 4px 0;
+        }
+
+        label {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #424242;
+            vertical-align: top;
+        }
+
+        input.answer[type="radio"] {
+            margin-bottom: 10px;
+        }
+
+        input.quizSubmit[type="submit"] {
+            background-clip: border-box;
+            background-origin: padding-box;
+            background-size: auto;
+            transition-delay: 0s, 0s;
+            transition-duration: 0.2s, 0.2s;
+            transition-property: color, background-color;
+            transition-timing-function: ease, ease;
+            box-shadow: rgba(0, 0, 0, 0.498039) 0px 0px 5px 0px;
+            color: #ffffff;
+            background-color: #c30b0a;
+            margin: 0;
+            border: 0;
+            outline: 0;
+            text-transform: uppercase;
+            height: 35px;
+            width: 85px;
+            border: 1px solid #5E5E5E;
+            border-radius: 5px;
+
+        }
+
+        input.quizSubmit[type="submit"]:hover {
+            color: #ffffff;
+            background: #680f11;
+            text-decoration: none;
+        }
+
+        table {
+            background-color: rgb(164, 156, 240);
+            border: 1px solid #BDBDBD;
+            border-radius: 5px;
+            padding: 10px;
+            padding-left: 25px;
+            box-shadow: rgba(0, 0, 0, 0.498039) 0px 0px 1px 0px;
+        }
+
+
+        .submitter {
+            width: 85px;
+        }
+
+        .hide {
+            display: none;
+        }
+
+    </style>
+
+    <h1 class="quizHeader"> QUIZ!</h1>
+
+    <table style="width:583px">
+        <tr>
+            <td>
+                <div>
+                    <p class="question">1. In which year did Maradona score a goal with his hand?</p>
+
+                    <ul>
+                        <input class="answer" type="radio" name="q1" value="1">
+                        <label id="correctString1">1986</label>
+                        <br>
+                        <input class="answer" type="radio" name="q1" value="0">
+                        <label>1988</label>
+                        <br>
+                        <input class="answer" type="radio" name="q1" value="0">
+                        <label>1876</label>
+                        <br>
+                        <input class="answer" type="radio" name="q1" value="0">
+                        <label>1990</label>
+                    </ul>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <p class="question">2. What is the national sport in Japan? </p>
+
+                    <ul>
+                        <input class="answer" type="radio" name="q2" value="0">
+                        <label>karatey</label>
+                        <br>
+                        <input class="answer" type="radio" name="q2" value="1">
+                        <label id="correctString2">Sumo Wrestling</label>
+                        <br>
+                        <input class="answer" type="radio" name="q2" value="0">
+                        <label>Cricket</label>
+                        <br>
+                        <input class="answer" type="radio" name="q2" value="0">
+                        <label>Football</label>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    <p class="question">3. What is Japanese sake made from?</p>
+
+                    <ul>
+                        <input class="answer" type="radio" name="q3" value="0">
+                        <label>juice</label>
+                        <br>
+                        <input class="answer" type="radio" name="q3" value="1">
+                        <label id="correctString3">Rice</label>
+                        <br>
+                        <input class="answer" type="radio" name="q3" value="0">
+                        <label>Chiken Curry</label>
+                        <br>
+                        <input class="answer" type="radio" name="q3" value="0">
+                        <label>Milk shake</label>
+                    </ul>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <p class="question">4. Which vitamin is the only one that you will not find in an egg?</p>
+
+                    <ul>
+                        <input class="answer" type="radio" name="q4" value="0">
+                        <label>Vitamin A</label>
+                        <br>
+                        <input class="answer" type="radio" name="q4" value="1">
+                        <label id="correctString4">Vitamin C</label>
+                        <br>
+                        <input class="answer" type="radio" name="q4" value="0">
+                        <label>Vitamin B</label>
+                        <br>
+                        <input class="answer" type="radio" name="q4" value="0">
+                        <label>Vitamin D</label>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <div class="submitter">
+        <input class="quizSubmit" id="submitButton" onClick="submitQuiz()" type="submit" value="Submit" />
+    </div>
+
+    
+    <div class="quizAnswers" id="correctAnswer1"></div>
+    <div class="quizAnswers" id="correctAnswer2"></div>
+    <div class="quizAnswers" id="correctAnswer3"></div>
+    <div class="quizAnswers" id="correctAnswer4"></div>
+
+    
+    <div>
+        <h2 class="quizScore" id="userScore"></h2>
+    </div>
+    </div>
+
+
+
+    <script>
+
+        function submitQuiz() {
+            console.log('submitted');
+
+            
+            function answerScore(qName) {
+                var radiosNo = document.getElementsByName(qName);
+
+                for (var i = 0, length = radiosNo.length; i < length; i++) {
+                    if (radiosNo[i].checked) {
+                        
+                        var answerValue = Number(radiosNo[i].value);
+                    }
+                }
+                
+                if (isNaN(answerValue)) {
+                    answerValue = 0;
+                }
+                return answerValue;
+            }
+
+            
+            var calcScore = (answerScore('q1') + answerScore('q2') + answerScore('q3') + answerScore('q4'));
+            console.log("CalcScore: " + calcScore); 
+
+            
+            function correctAnswer(correctStringNo, qNumber) {
+                console.log("qNumber: " + qNumber);  
+                return ("The correct answer for question #" + qNumber + ": &nbsp;<strong>" +
+                    (document.getElementById(correctStringNo).innerHTML) + "</strong>");
+            }
+
+            
+            if (answerScore('q1') === 0) {
+                document.getElementById('correctAnswer1').innerHTML = correctAnswer('correctString1', 1);
+            }
+            if (answerScore('q2') === 0) {
+                document.getElementById('correctAnswer2').innerHTML = correctAnswer('correctString2', 2);
+            }
+            if (answerScore('q3') === 0) {
+                document.getElementById('correctAnswer3').innerHTML = correctAnswer('correctString3', 3);
+            }
+            if (answerScore('q4') === 0) {
+                document.getElementById('correctAnswer4').innerHTML = correctAnswer('correctString4', 4);
+            }
+
+        
+            var questionCountArray = document.getElementsByClassName('question');
+
+            var questionCounter = 0;
+            for (var i = 0, length = questionCountArray.length; i < length; i++) {
+                questionCounter++;
+            }
+
+            
+            var showScore = "Your Score: " + calcScore + "/" + questionCounter;
+            
+            if (calcScore === questionCounter) {
+                showScore = showScore + "&nbsp; <strong>Perfect Score!</strong>"
+            };
+            document.getElementById('userScore').innerHTML = showScore;
+        }
+
+        $(document).ready(function () {
+
+            $('#submitButton').click(function () {
+                $(this).addClass('hide');
+            });
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>
